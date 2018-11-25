@@ -1,28 +1,27 @@
 <resources>
 
     <!--Labels-->
-    <string name="lbl_bookbase">Bookbase</string>
-    <string name="lbl_done">Done</string>
-    <string name="lbl_scanBarcode">Scan Barcode</string>
-    <string name="lbl_title">Title</string>
-    <string name="lbl_author">Author</string>
-    <string name="lbl_description">Description</string>
-    <string name="lbl_genre">Genre</string>
-    <string name="lbl_review">Review</string>
-    <string name="lbl_purchase_date">Purchase Date</string>
-    <string name="lbl_purchase_price">Purchase Price</string>
+    <string name="lbl_bookbase">Библиотека</string>
+    <string name="lbl_done">Готово</string>
+    <string name="lbl_title">Заголовок</string>
+    <string name="lbl_author">Автор</string>
+    <string name="lbl_description">Описание</string>
+    <string name="lbl_genre">Жанр</string>
+    <string name="lbl_review">Отзыв</string>
+    <string name="lbl_purchase_date">Дата покупки</string>
+    <string name="lbl_purchase_price">Цена покупки</string>
 
-    <string name="title_activity_add_book">AddBookActivity</string>\
-    <string name="cover_content_descr">book cover image</string>
-    <string name="lbl_options">Options</string>
-    <string name="lbl_edit">Edit</string>
-    <string name="delete">Delete</string>
-    <string name="msg_empty_library">Oops&#8230;Looks like you don\'t have any books yet!</string>
-    <string name="lbl_search">Search</string>
-    <string name="lbl_appname">Bookbase</string>
-    <string name="lbl_no_cover">No Cover Image</string>
-    <string name="cover_image">Book Cover Image</string>
-    <string name="lbl_add_new_book">Add New Book</string>
-    <string name="lbl_unknown_genre">Unknown Genre</string>
+    <string name="title_activity_add_book">Добавление книги</string>\
+    <string name="title_activity_edit_book">Изменение книги</string>
+    <string name="cover_content_descr">Изображение</string>
+    <string name="lbl_options">Настройки</string>
+    <string name="lbl_edit">Изменить</string>
+    <string name="delete">Удалить</string>
+    <string name="msg_empty_library">Ваша библиотека пуста</string>
+    <string name="lbl_search">Поиск</string>
+    <string name="lbl_appname">Book Library</string>
+    <string name="lbl_no_cover">Нет изображения</string>
+    <string name="cover_image">Изображение</string>
+    <string name="lbl_unknown_genre">Неизвестный жанр</string>
 
 </resources>

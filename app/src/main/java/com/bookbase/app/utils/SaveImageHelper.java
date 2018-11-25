@@ -3,7 +3,8 @@ package com.bookbase.app.utils;
 import android.content.Context;
 import android.graphics.Bitmap;
 
-import com.bookbase.app.model.entity.Book;
+import com.bookbase.app.App;
+import com.bookbase.app.database.entity.Book;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -14,35 +15,29 @@ import java.util.Locale;
 
 public class SaveImageHelper {
 
-    private final Context context;
-
-    public SaveImageHelper(Context context) {
-        this.context = context;
-    }
-
-    public String saveImageToInternalStorage(Bitmap image, Book book){
-        if(image != null){
+    public String saveImageToInternalStorage(Bitmap image, Book book) {
+        if (image != null) {
 
             // Setup date format and get current datetime to append to filename.
             SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmm", Locale.ENGLISH);
             Date now = new Date();
 
             // Setup directory, file and output stream.
-            File dir = context.getDir("images", Context.MODE_PRIVATE);
+            File dir = App.getInstance().getDir("images", Context.MODE_PRIVATE);
             File myPath = new File(dir, book.getTitle() + "_coverimage_" + df.format(now) + ".bmp");
             FileOutputStream out = null;
 
-            try{
+            try {
                 out = new FileOutputStream(myPath);
                 image.compress(Bitmap.CompressFormat.PNG, 100, out);
-            } catch(IOException e){
+            } catch (IOException e) {
                 e.printStackTrace();
-            } finally{
-                try{
+            } finally {
+                try {
                     if (out != null) {
                         out.close();
                     }
-                } catch(IOException e){
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
             }

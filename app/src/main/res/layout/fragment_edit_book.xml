@@ -8,8 +8,7 @@
     <include
         layout="@layout/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+        android:layout_height="wrap_content" />
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -40,14 +39,14 @@
                         android:id="@+id/cover_image"
                         android:layout_width="110dp"
                         android:layout_height="124dp"
-                        android:layout_marginBottom="16dp"
                         android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:contentDescription="@string/cover_image"
                         android:cropToPadding="false"
-                        android:maxHeight="@android:dimen/thumbnail_height"
                         android:maxWidth="@android:dimen/thumbnail_height"
+                        android:maxHeight="@android:dimen/thumbnail_height"
                         android:scaleType="centerCrop"
                         android:visibility="gone"
-                        android:contentDescription="@string/cover_image"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
@@ -60,12 +59,12 @@
                         android:id="@+id/no_image"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="8dp"
                         android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
                         android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="8dp"
                         android:text="@string/lbl_no_cover"
                         android:textSize="18sp"
                         android:textStyle="bold"
@@ -83,9 +82,9 @@
                 android:id="@+id/camera_fab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="32dp"
-                android:layout_marginRight="16dp"
                 android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="32dp"
                 android:clickable="true"
                 android:focusable="true"
                 app:layout_constraintBottom_toTopOf="@+id/add_book_title_field"
@@ -97,9 +96,9 @@
                 android:id="@+id/add_book_title_field"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -121,9 +120,9 @@
                 android:id="@+id/add_book_author_field"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/add_book_title_field">
@@ -135,52 +134,27 @@
                     android:hint="@string/lbl_author"
                     android:imeOptions="actionNext"
                     android:inputType="textCapWords"
-                    android:nextFocusDown="@id/add_book_description_data"
+                    android:nextFocusDown="@id/add_book_genre_field"
                     android:singleLine="true"
                     android:textSize="14sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/add_book_author" />
+                    app:layout_constraintTop_toBottomOf="@+id/add_book_author_field" />
 
             </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/add_book_descr_field"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/add_book_author_field">
-
-                <EditText
-                    android:id="@+id/add_book_description_data"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="@string/lbl_description"
-                    android:inputType="textCapSentences|textMultiLine"
-                    android:nextFocusDown="@id/add_book_genre_data"
-                    android:textSize="14sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/add_book_description" />
-            </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/add_book_genre_field"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/add_book_descr_field">
+                app:layout_constraintTop_toBottomOf="@+id/add_book_author_field">
 
                 <AutoCompleteTextView
                     android:id="@+id/add_book_genre_data"
@@ -194,16 +168,16 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/add_book_genre" />
+                    app:layout_constraintTop_toBottomOf="@+id/add_book_genre_field" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/add_book_review_field"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/add_book_genre_field">
@@ -220,7 +194,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/add_book_review_lbl" />
+                    app:layout_constraintTop_toBottomOf="@+id/add_book_review_field" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -228,9 +202,9 @@
                 android:id="@+id/add_book_purchase_dt_field"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -240,7 +214,10 @@
                     android:id="@+id/add_book_purchase_date_data"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:editable="false"
                     android:ems="10"
+                    android:focusable="true"
                     android:hint="@string/lbl_purchase_date"
                     android:inputType="date"
                     android:nextFocusDown="@id/add_book_purchase_price_data"
@@ -248,16 +225,16 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/add_book_purchase_date_lbl" />
+                    app:layout_constraintTop_toBottomOf="@+id/add_book_purchase_dt_field" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/add_book_purchase_price_field"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/add_book_purchase_dt_field">
@@ -273,7 +250,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/add_book_purchase_price_lbl" />
+                    app:layout_constraintTop_toBottomOf="@+id/add_book_purchase_price_field" />
             </android.support.design.widget.TextInputLayout>
 
             <RatingBar
@@ -281,9 +258,9 @@
                 style="@style/Widget.AppCompat.RatingBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 android:numStars="5"
                 android:stepSize="1"
                 app:layout_constraintEnd_toEndOf="parent"

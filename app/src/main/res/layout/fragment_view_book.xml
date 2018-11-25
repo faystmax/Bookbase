@@ -4,7 +4,7 @@
     android:id="@+id/view_book_screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".viewBook.ViewBookFragment">
+    tools:context=".activity.viewBook.ViewBookFragment">
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -66,50 +66,9 @@
             android:maxHeight="@android:dimen/thumbnail_height"
             android:maxWidth="@android:dimen/thumbnail_height"
             android:contentDescription="@string/cover_image"
-            app:layout_constraintStart_toStartOf="@+id/view-book-lbl-descr"
+            app:layout_constraintStart_toStartOf="@+id/view-book-lbl-review"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/view-book-lbl-descr"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/lbl_description"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view-book-cover" />
-
-        <TextView
-            android:id="@+id/view_book_descr"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginStart="16dp"
-            android:text=""
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view-book-lbl-descr" />
-
-        <TextView
-            android:id="@+id/view_book_genre"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline3"
-            app:layout_constraintTop_toBottomOf="@+id/view_book_author" />
 
         <TextView
             android:id="@+id/view-book-lbl-review"
@@ -126,7 +85,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view_book_descr" />
+            app:layout_constraintTop_toBottomOf="@+id/view-book-cover" />
+
+        <TextView
+            android:id="@+id/view_book_genre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/view_book_author" />
+
 
         <TextView
             android:id="@+id/view_book_review"

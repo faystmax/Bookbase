@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.bookbase.app">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
+        android:name="com.bookbase.app.App"
         android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/lbl_bookbase"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:fullBackupContent="@xml/backup_descriptor">
-        <activity android:name="com.bookbase.app.mainscreen.HomeScreen">
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name="com.bookbase.app.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,23 +22,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.bookbase.app.addBook.AddBookActivity"
+            android:name=".activity.addBook.AddEditBookActivity"
             android:label="@string/title_activity_add_book"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.bookbase.app.mainscreen.HomeScreen"
-                />
+                android:value="com.bookbase.app.activity.MainActivity" />
         </activity>
-        
+
         <provider
-            android:authorities="${applicationId}.app.utils"
             android:name=".utils.GenericFileProvider"
+            android:authorities="${applicationId}.app.utils"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths"/>
+                android:resource="@xml/provider_paths" />
         </provider>
 
         <meta-data

@@ -1,10 +1,9 @@
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.bookbase.app.library.BooksFragment">
+    tools:context="com.bookbase.app.activity.books.BooksFragment">
 
     <!-- Wrapped in FrameLayout to fix bug where FAB drawing
     to screen in incorrect position in some circumstances. -->
@@ -21,11 +20,11 @@
                 android:id="@+id/empty_view_img"
                 android:layout_width="249dp"
                 android:layout_height="254dp"
-                android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="112dp"
-                android:src="@mipmap/empty_shelf"
+                android:layout_marginEnd="8dp"
                 android:contentDescription="@string/msg_empty_library"
+                android:src="@mipmap/empty_shelf"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.504"
                 app:layout_constraintStart_toStartOf="parent"
@@ -35,9 +34,9 @@
                 android:id="@+id/empty_view"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
                 android:text="@string/msg_empty_library"
                 android:textAlignment="center"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -63,17 +62,17 @@
 
         </android.support.constraint.ConstraintLayout>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/add_book_fab"
-        app:layout_behavior="com.bookbase.bookbase.fragments.behaviour.FABScrollBehaviour"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        android:src="@mipmap/ic_add_black_24dp"
-        app:layout_anchor="@id/books_list"
-        app:layout_anchorGravity="bottom|end"
-        app:fabSize="normal"/>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add_book_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:src="@mipmap/ic_add_black_24dp"
+            app:fabSize="normal"
+            app:layout_anchor="@id/books_list"
+            app:layout_anchorGravity="bottom|end"
+            app:layout_behavior="com.bookbase.bookbase.fragments.behaviour.FABScrollBehaviour" />
 
     </FrameLayout>
 

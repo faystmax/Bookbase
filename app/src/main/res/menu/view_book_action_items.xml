@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".library.addBook.AddBookActivity">
 
     <item
         android:id="@+id/view_book_edit"
-        android:title="@string/lbl_edit"/>
+        android:title="@string/lbl_edit" />
     <item
         android:id="@+id/view_book_delete"
-        android:title="@string/delete"/>
+        android:title="@string/delete" />
 </menu>
